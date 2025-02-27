@@ -1,0 +1,54 @@
+.card {
+  position: fixed;
+  bottom: -100%; /* Изначально скрыта */
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 20px 20px 0 0;
+  transition: bottom 0.4s ease-in-out, height 0.4s ease-in-out; /* Плавное появление */
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.card.half-open {
+  bottom: 0; /* Поднимаем на 50% экрана */
+  height: 50%;
+}
+
+.card.full-open {
+  bottom: 0; /* Уже показана, просто увеличиваем */
+  height: 100%;
+}
+
+.card-content {
+  width: 100%;
+  text-align: center;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.images img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
