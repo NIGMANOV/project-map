@@ -56,7 +56,7 @@ const Search = () => {
         </div>
 
         <div className="scroll-nav">
-          <button>
+          <button className="btn-historic btn-historic--active">
             <svg
               width="20"
               height="20"

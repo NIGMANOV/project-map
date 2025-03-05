@@ -1,6 +1,185 @@
 @use "../../assets/scss/variables" as *;
 
+.login {
+  position: fixed;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
 
+.card-login {
+  background-color: white;
+  border-radius: 15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 20; /* Карточка выше фона */
+  .btn-close {
+    padding-top: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-self: end;
+  }
+
+  .login-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    margin-left: 20px;
+  }
+
+  form {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .password {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f2f2f2;
+      border-radius: 12px;
+
+      svg {
+        margin-right: 16px;
+      }
+    }
+
+    input {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 0px;
+      color: #00152a;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background-color: #f2f2f2;
+      border: none;
+      outline: none;
+      &::placeholder {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #808080;
+      }
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+      text-align: right;
+      text-decoration: none;
+      color: #007aff;
+    }
+
+    button {
+      margin-top: 13px;
+      padding: 13px 130px;
+      background-color: #007aff;
+      border-radius: 13px;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+      text-align: center;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000A14BF; 
+  z-index: 10;
+}
+
+.overlay1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000A14BF; 
+  z-index: 10;
+}
+
+.line {
+  margin: 24px 20px;
+  width: 320px;
+  height: 0.5px;
+  background-color: #e5e5e5;
+}
+
+.google-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  gap: 8px;
+  background-color: #333333;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 24px;
+  border-radius: 13px;
+  position: relative;
+  overflow: hidden;
+
+  p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: #ffffff;
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.create-account {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: #00152a;
+  }
+
+  a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: #007aff;
+    text-decoration: none;
+  }
+}
 
 .header {
   position: fixed;
@@ -30,6 +209,7 @@ button {
 .header-signin {
   opacity: 0;
   &--active {
+    
     opacity: 1;
   }
   &-login {

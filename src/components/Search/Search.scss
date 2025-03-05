@@ -73,6 +73,20 @@
     letter-spacing: 0px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+
+  .btn-historic--active{
+    background-color: #FFFFFF;
+    display: flex;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 53px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.8px;
+    letter-spacing: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .btn-close{

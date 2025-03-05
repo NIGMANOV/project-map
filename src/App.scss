@@ -19,3 +19,26 @@ input, textarea, button {
   padding: 0 15px;
   margin: 0 auto;
 }
+
+div {
+  position: relative; // Чтобы элементы не накладывались некорректно
+}
+
+.header {
+  position: fixed; // Закрепит сверху
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; // На переднем плане
+}
+
+.search {
+  position: relative;
+  z-index: 50; // Под хедером
+}
+
+.map {
+  position: relative;
+  z-index: 0; // Самый задний план
+}
+
