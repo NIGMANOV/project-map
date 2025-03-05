@@ -1,0 +1,81 @@
+@use "../../assets/scss/variables" as *;
+
+.main {
+  position: fixed;
+  top: 57px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.inputs {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 13px;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  padding: 0px 13px;
+  width: 360px;
+  background-color: #FFFFFF;
+  input {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    color: #00152a;
+    width: 300px;
+    padding: 12px 13px;
+    border: none;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  input::placeholder {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    color: #00152a;
+    opacity: 0.35;
+  }
+}
+
+.scroll-nav {
+  padding-right: 25px;
+  margin-left: -5px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  overflow: auto;
+  white-space: nowrap;
+  scrollbar-width: none; // Для Firefox
+  -ms-overflow-style: none; // Для Internet Explorer и Edge
+  button {
+    background-color: #FFFFFF;
+    display: flex;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 53px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.8px;
+    letter-spacing: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.btn-close{
+  display: flex;
+}
+

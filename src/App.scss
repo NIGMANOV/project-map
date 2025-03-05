@@ -1,0 +1,21 @@
+@use './assets/scss/variables' as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $font-family;
+}
+
+input, textarea, button {
+    font-family: inherit;
+}
+
+.container {
+  max-width: 390px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
