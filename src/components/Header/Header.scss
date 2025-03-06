@@ -108,15 +108,8 @@
   z-index: 10;
 }
 
-.overlay1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000A14BF; 
-  z-index: 10;
-}
+
+
 
 .line {
   margin: 24px 20px;
@@ -193,6 +186,19 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
+  }
+
+  &-overlay{
+    &::before{
+      content: '';
+      position: fixed;
+      top: 169.5px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000A14BF; 
+      z-index: -1;
+    }
   }
 }
 

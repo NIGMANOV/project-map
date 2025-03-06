@@ -9,6 +9,7 @@ const App = () => {
     <div>
       <Header  />
       <Search />
+      
       <Map />
     </div>
   )

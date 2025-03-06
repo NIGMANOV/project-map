@@ -13,7 +13,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="header">
+    {/* <div className="overlay" onClick={() => setbtnLogin(false)}></div> */}
+      <header className={btnClick ? 'header header-overlay' : 'header'}>
         <div className="container">
           <div className="header-wrapper">
             <div className="header-image">
