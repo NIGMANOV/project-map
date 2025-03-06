@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Header/Header.scss";
+import Search from "../Search/Search";
 
 const Header = () => {
   const [btnClick, setBtnClick] = useState(false);
@@ -130,7 +131,7 @@ const Header = () => {
               </button>
             </div>
           </div>
-
+          
           {btnClick && (
             <>
               <div
@@ -154,6 +155,8 @@ const Header = () => {
           )}
         </div>
       </header>
+
+      <Search />
 
       <div className="login">
         {btnLogin && (

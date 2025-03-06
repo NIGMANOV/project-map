@@ -6,6 +6,10 @@
   left: 0;
   width: 100%;
   z-index: 2;
+
+  &--active{
+    background-color: #004fa2;
+  }
 }
 
 .inputs {
@@ -46,13 +50,24 @@
   }
 }
 
+.sa{
+position: fixed;
+z-index: 2;
+top: 636px;
+right: 15px;
+width: 150px;
+height: 40px;
+background-color: #FFFFFF;
+border-radius: 53px;
+}
+
 .scroll-nav {
   padding-right: 25px;
   margin-left: -5px;
-  padding-left: 5px;
+  padding-left: 80px;
   padding-bottom: 10px;
-  width: 400px;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   margin-top: 15px;
@@ -75,7 +90,38 @@
   }
 
   .btn-historic--active{
-    background-color: #FFFFFF;
+    background-color: #A70003;
+    color: #FFFFFF;
+    display: flex;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 53px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.8px;
+    letter-spacing: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .btn-natural--active{
+    background-color: #00A73D;
+    color: #FFFFFF;
+    display: flex;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 53px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.8px;
+    letter-spacing: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .btn-food--active{
+    background-color: #D94F00;
+    color: #FFFFFF;
     display: flex;
     gap: 8px;
     padding: 6px 10px;
