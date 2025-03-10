@@ -1,10 +1,15 @@
 @use "../../assets/scss/variables" as *;
 
 .card-content {
+  width: 100%;
   max-height: 100vh; // Ограничение по высоте
-  overflow-y: auto; // Включает вертикальный скролл
+  overflow-y: hidden; // Включает вертикальный скролл
   scrollbar-width: none; // Для Firefox
   -ms-overflow-style: none; // Для Internet Explorer и Edge
+
+  &.full-open {
+    overflow-y: auto;
+  }
 }
 
 .card-content::-webkit-scrollbar {
@@ -69,7 +74,7 @@
   display: flex;
   justify-content: center;
   margin-top: 10px;
-  .line {
+  .line-toch {
     width: 99px;
     height: 3px;
     border-radius: 31px;
@@ -89,12 +94,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
+  padding-bottom: 60px;
 }
 
 .card.half-open {
-  bottom: 0; /* Поднимаем на 50% экрана */
+  bottom: -45%;
   overflow-y: hidden;
-  height: 50%;
+  height: 100%
 }
 
 .card.full-open {
@@ -102,10 +109,6 @@
   top: 55px;
   height: 100%;
   border-radius: 0;
-}
-
-.card-content {
-  width: 100%;
 }
 
 .images {
@@ -141,6 +144,7 @@
 }
 
 .custom-swiper {
+  margin-left: 15px;
   position: relative;
   margin-top: 15px;
 }

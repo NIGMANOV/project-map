@@ -94,24 +94,38 @@ const MapComponent = ({ onMapLoad }) => {
   const [map, setMap] = useState(null);
 
   useEffect(() => {
-    if (!map) {
+    if (!map && ref.current) {
       const newMap = new window.google.maps.Map(ref.current, {
         center,
         zoom: 10,
         styles: darkMapStyle,
-        disableDefaultUI: true, // Полностью отключает интерфейс
-        mapTypeControl: false, // Убирает кнопки "Спутник", "Карта"
-        fullscreenControl: false, // Убирает кнопку полноэкранного режима
-        streetViewControl: false, // Убирает "Просмотр улиц"
-        gestureHandling: "greedy", // Позволяет двигать карту одним пальцем, убирает надпись
+        disableDefaultUI: true,
+        mapTypeControl: false,
+        fullscreenControl: false,
+        streetViewControl: false,
+        gestureHandling: "greedy",
       });
       setMap(newMap);
-      onMapLoad(newMap);
+      onMapLoad?.(newMap);
     }
   }, [map, onMapLoad]);
 
+  // // Добавление маркера, когда карта загружена
+  // useEffect(() => {
+  //   if (map) {
+  //     new google.maps.Marker({
+  //       position: { lat: 36.214841, lng: 28.115609 },
+  //       map,
+  //       icon: {
+  //         url: "https://cdn.onlinewebfonts.com/svg/img_98042.png",
+  //         scaledSize: new google.maps.Size(40, 40),
+  //       },
+  //     });
+  //   }
+  // }, [map]);
+
   return <div ref={ref} style={{ width: "100%", height: "100vh" }} />;
-}; // Стилизация компонентов
+};
 
 const Map = () => {
   const [selectedMarker, setSelectedMarker] = useState(null);
@@ -169,6 +183,23 @@ const Map = () => {
     }
   };
 
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: document.title,
+          text: "Посмотри, это интересно!",
+          url: window.location.href,
+        });
+        console.log("Контент успешно отправлен");
+      } catch (error) {
+        console.error("Ошибка при отправке:", error);
+      }
+    } else {
+      alert('Функция "Поделиться" не поддерживается в вашем браузере.');
+    }
+  };
+
   return (
     <Wrapper
       apiKey={apiKey}
@@ -189,7 +220,7 @@ const Map = () => {
             <div className="container">
               {!isFullOpen && (
                 <div className="card-line">
-                  <div className="line"></div>
+                  <div className="line-toch"></div>
                 </div>
               )}
               <div className="card-title">
@@ -288,7 +319,7 @@ const Map = () => {
                 </svg>
                 Save
               </button>
-              <button className="card-scrollbtn__btn">
+              <button className="card-scrollbtn__btn" onClick={handleShare}>
                 <svg
                   width="16"
                   height="17"

@@ -20,9 +20,9 @@ input, textarea, button {
   margin: 0 auto;
 }
 
-div {
-  position: relative; // Чтобы элементы не накладывались некорректно
-}
+// div {
+//   position: relative; // Чтобы элементы не накладывались некорректно
+// }
 
 .header {
   position: fixed; // Закрепит сверху

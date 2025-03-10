@@ -2,12 +2,12 @@
 
 .main {
   position: fixed;
-  top: 57px;
+  top: 56px;
   left: 0;
   width: 100%;
   z-index: 2;
 
-  &--active{
+  &--active {
     background-color: #004fa2;
   }
 }
@@ -21,7 +21,7 @@
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
   padding: 0px 13px;
   width: 360px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   input {
     font-family: $font-family;
     font-weight: 400;
@@ -50,15 +50,50 @@
   }
 }
 
-.sa{
-position: fixed;
-z-index: 2;
-top: 636px;
-right: 15px;
-width: 150px;
-height: 40px;
-background-color: #FFFFFF;
-border-radius: 53px;
+.all-card {
+  position: fixed;
+  z-index: 2;
+  top: 636px;
+  right: 15px;
+
+  .last-wiew {
+    position: relative;
+    overflow: hidden;
+    gap: 7px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 5px 12px;
+    border-radius: 53px;
+    box-shadow: 0px 4px 8.7px 0px rgba(0, 0, 0, 0.25);
+
+    .title {
+      color: #004fa2;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%; /* 20.8px */
+    }
+
+    .index {
+      padding: 5px;
+      border-radius: 25px;
+      background: #edece8;
+      color: #004fa2;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%; /* 20.8px */
+    }
+
+    .btn-view {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 .scroll-nav {
@@ -76,7 +111,7 @@ border-radius: 53px;
   scrollbar-width: none; // Для Firefox
   -ms-overflow-style: none; // Для Internet Explorer и Edge
   button {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     display: flex;
     gap: 8px;
     padding: 6px 10px;
@@ -89,9 +124,9 @@ border-radius: 53px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
-  .btn-historic--active{
-    background-color: #A70003;
-    color: #FFFFFF;
+  .btn-historic--active {
+    background-color: #a70003;
+    color: #ffffff;
     display: flex;
     gap: 8px;
     padding: 6px 10px;
@@ -104,9 +139,9 @@ border-radius: 53px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
-  .btn-natural--active{
-    background-color: #00A73D;
-    color: #FFFFFF;
+  .btn-natural--active {
+    background-color: #00a73d;
+    color: #ffffff;
     display: flex;
     gap: 8px;
     padding: 6px 10px;
@@ -119,9 +154,9 @@ border-radius: 53px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
-  .btn-food--active{
-    background-color: #D94F00;
-    color: #FFFFFF;
+  .btn-food--active {
+    background-color: #d94f00;
+    color: #ffffff;
     display: flex;
     gap: 8px;
     padding: 6px 10px;
@@ -135,7 +170,53 @@ border-radius: 53px;
   }
 }
 
-.btn-close{
+.btn-close {
   display: flex;
 }
 
+
+.list {
+  height: 75%;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+  top: 179px;
+  position: absolute;
+
+  .swiper {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    .image {
+      width: 120px;
+      height: 120px;
+      border-radius: 14px;
+      border: 1px solid black;
+    }
+  }
+
+  .title {
+    margin-top: 10px;
+    color: #00152a;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+  }
+
+  .subTitle {
+    margin-top: 10px;
+    color: #00152a;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 20.8px */
+  }
+
+  .line-list {
+    margin: 15px 0;
+    height: 2px;
+    border-radius: 37px;
+    background: #cfcfcf;
+  }
+}
